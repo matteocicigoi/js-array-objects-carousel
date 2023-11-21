@@ -1,6 +1,7 @@
 # Esercizio: Carosello Array di Oggetti
 
-### Esercizio originale: [Carosello Mono Array](https://github.com/matteocicigoi/js-carousel-autoplay)
+### Esercizio Autoplay: [JS Carousel autoplay](https://github.com/matteocicigoi/js-carousel-autoplay)
+### Esercizio Originale: [ Carosello Mono Array](https://github.com/matteocicigoi/js-array-carousel)
 
  ## Array di oggetti
 
