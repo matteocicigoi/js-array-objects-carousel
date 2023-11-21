@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 900px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.items {
+    position: relative;
+    width: 900px;
+    height: 300px;
+}
+
+.item {
+    width: calc(100% - 150px);
+    height: 100%;
+    display: none;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item div {
+    text-align: end;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+}
+
+.item.active {
+    display: block;
+}
+
+.prev, .next {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0;
+    border-radius: 50%;
+    background: orange;
+    position: absolute;
+    right: 75px;
+    transform: translate(50%);
+    cursor: pointer;
+    z-index: 999;
+}
+
+.next {
+    bottom: 0;
+}
+.prev {
+    top: 0;
+}
+.prev::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%) rotate(-45deg);
+}
+
+.next::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    display: block;
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%) rotate(135deg);
+}
+.thumbnails{
+    position: absolute;
+    right: 0;
+    width: 150px;
+    height: 300px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+.box{
+    height: 20%;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+.box.active{
+    border: 2px solid white;
+}
+.box.active img{
+    filter: grayscale(0);
+}
+.buttons{
+    position: absolute;
+    margin-top: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
